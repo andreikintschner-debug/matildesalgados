@@ -1,0 +1,1784 @@
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  ANTES DE PUBLICAR — substituir os seguintes placeholders:  ║
+  ║                                                              ║
+  ║  1. CHECKOUT ✓ → https://pay.hotmart.com/H106560628F         ║
+  ║     (botão de compra na secção Oferta Especial)              ║
+  ║  2. PIXEL_ID       → ID do Meta Pixel (Facebook)             ║
+  ║  3. Imagens:                                                 ║
+  ║     - Foto da Chef Matilde (secção "Conhece a Chef")         ║
+  ║     - Foto antes/depois dos salgados                         ║
+  ║     - Capas dos 11 e-books (secção "O que vais receber")     ║
+  ║     - Imagem Open Graph (og:image)                           ║
+  ║  4. [a preencher]  → NIF/NIPC real no rodapé                 ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pack de E-books do Salgadeiro Profissional — 11 E-books + 100 Receitas | Chef Matilde</title>
+  <meta name="description" content="11 e-books com mais de 100 receitas de salgados profissionais. Aprende a fazer salgados perfeitos em casa e começa a ganhar dinheiro. Pack completo por apenas 7,90 €.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_PT">
+  <meta property="og:title" content="Pack de E-books do Salgadeiro Profissional — 11 E-books + 100 Receitas">
+  <meta property="og:description" content="Receitas secretas e simples para fazeres em casa. Começa a ganhar mais de 100 €/dia. Pack completo por apenas 7,90 €.">
+  <!-- og:image — substituir pelo URL real da imagem -->
+  <meta property="og:image" content="https://exemplo.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pack de E-books do Salgadeiro Profissional — 11 E-books + 100 Receitas">
+  <meta name="twitter:description" content="Receitas secretas e simples para fazeres em casa. Começa a ganhar mais de 100 €/dia. Pack completo por apenas 7,90 €.">
+  <!-- twitter:image — substituir pelo URL real da imagem -->
+  <meta name="twitter:image" content="https://exemplo.com/og-image.jpg">
+
+  <!-- Meta Pixel — substituir PIXEL_ID pelo ID real -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'PIXEL_ID');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1" alt=""></noscript>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #8B5E3C;
+      --color-primary-dark: #6B4226;
+      --color-caramel: #C4893B;
+      --color-gold: #D4A04A;
+      --color-cream: #FFF9F0;
+      --color-cream-dark: #F5EDE0;
+      --color-cta: #E8491D;
+      --color-cta-hover: #D13A10;
+      --color-cta-pulse: rgba(232, 73, 29, 0.4);
+      --color-green: #25D366;
+      --color-green-dark: #128C3E;
+      --color-text: #2C1810;
+      --color-text-light: #5A4636;
+      --color-text-muted: #8A7A6A;
+      --color-white: #FFFFFF;
+      --color-border: #E8DDD0;
+      --color-bonus: #D4A04A;
+      --color-before: #C0392B;
+      --color-after: #27AE60;
+      --color-chat-bg: #ECE5DD;
+      --color-chat-bubble: #DCF8C6;
+      --color-star: #F5A623;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 12px;
+      --radius-sm: 8px;
+      --radius-lg: 20px;
+      --shadow: 0 4px 20px rgba(44, 24, 16, 0.08);
+      --shadow-lg: 0 8px 40px rgba(44, 24, 16, 0.12);
+      --max-width: 720px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-cream);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Reveal animations ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── CTA Buttons ── */
+    .cta-btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 480px;
+      padding: 18px 32px;
+      background: var(--color-cta);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 16px rgba(232, 73, 29, 0.3);
+      animation: pulse 2s infinite;
+      line-height: 1.3;
+    }
+    .cta-btn:hover {
+      background: var(--color-cta-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(232, 73, 29, 0.4);
+    }
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 4px 16px rgba(232, 73, 29, 0.3); }
+      50% { box-shadow: 0 4px 24px var(--color-cta-pulse), 0 0 0 8px rgba(232, 73, 29, 0.1); }
+    }
+    .cta-sub {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      opacity: 0.9;
+      margin-top: 4px;
+    }
+
+    /* ── Section spacing ── */
+    section {
+      padding: 56px 0;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 700;
+      text-align: center;
+      color: var(--color-primary-dark);
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--color-text-light);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      line-height: 1.5;
+    }
+
+    /* ── Placeholder images ── */
+    .img-placeholder {
+      background: #D5CEC4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8A7A6A;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-align: center;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    /* ══════════════════════════════
+       1. HERO
+    ══════════════════════════════ */
+    .hero {
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-caramel) 100%);
+      color: var(--color-white);
+      padding: 24px 0 48px;
+      text-align: center;
+    }
+    .hero-topline {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    .hero h1 span {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      margin-top: 4px;
+    }
+    .hero-desc {
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.92;
+      margin-bottom: 32px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .price-box {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      margin-bottom: 24px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .price-calc {
+      font-size: 0.875rem;
+      opacity: 0.85;
+      margin-bottom: 8px;
+    }
+    .price-old {
+      font-size: 1.5rem;
+      text-decoration: line-through;
+      opacity: 0.6;
+      font-weight: 600;
+    }
+    .price-new {
+      font-size: 3rem;
+      font-weight: 800;
+      font-family: var(--font-heading);
+      color: var(--color-white);
+      line-height: 1;
+      margin: 8px 0;
+    }
+    .price-badge {
+      display: inline-block;
+      background: var(--color-cta);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .hero .cta-btn {
+      margin-top: 8px;
+    }
+    .hero-access {
+      font-size: 0.8125rem;
+      opacity: 0.8;
+      margin-top: 12px;
+    }
+    .hero-bonus {
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 16px;
+      margin-top: 24px;
+      font-size: 0.875rem;
+      line-height: 1.5;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-chef {
+      font-size: 0.8125rem;
+      opacity: 0.7;
+      margin-top: 16px;
+      font-style: italic;
+    }
+
+    /* ══════════════════════════════
+       CAROUSEL
+    ══════════════════════════════ */
+    .carousel-wrap {
+      width: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+    .carousel-track {
+      display: flex;
+      gap: 12px;
+      width: max-content;
+      animation: carousel-scroll 32s linear infinite;
+    }
+    .carousel-track:hover {
+      animation-play-state: paused;
+    }
+    .carousel-track img {
+      width: 120px;
+      height: 180px;
+      border-radius: 16px;
+      object-fit: cover;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+      flex-shrink: 0;
+      display: block;
+    }
+    @keyframes carousel-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    @media (min-width: 640px) {
+      .carousel-track img {
+        width: 155px;
+        height: 232px;
+      }
+    }
+
+    /* ══════════════════════════════
+       EXPERT IMAGE
+    ══════════════════════════════ */
+    .expert-section {
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-caramel) 100%);
+      text-align: center;
+      padding: 0;
+      line-height: 0;
+    }
+    .expert-section img {
+      display: block;
+      width: 70%;
+      max-width: 70%;
+      height: auto;
+      margin: 0 auto;
+      -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    }
+    @media (min-width: 640px) {
+      .expert-section img {
+        width: 300px;
+        max-width: 300px;
+      }
+    }
+
+    /* ══════════════════════════════
+       2. IDENTIFICAS-TE
+    ══════════════════════════════ */
+    .pain-section {
+      background: var(--color-white);
+    }
+    .pain-list {
+      list-style: none;
+      max-width: 560px;
+      margin: 0 auto 32px;
+    }
+    .pain-list li {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 0.9375rem;
+      line-height: 1.55;
+    }
+    .pain-list li:last-child {
+      border-bottom: none;
+    }
+    .pain-story {
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto 32px;
+    }
+    .pain-story .arrow {
+      font-size: 2rem;
+      color: var(--color-caramel);
+      display: block;
+      margin: 16px 0;
+    }
+    .pain-story p {
+      font-size: 0.9375rem;
+      color: var(--color-text-light);
+      line-height: 1.6;
+      font-style: italic;
+    }
+    .pain-section .cta-wrap {
+      text-align: center;
+    }
+
+    /* ══════════════════════════════
+       3. MENSAGENS REAIS (WhatsApp)
+    ══════════════════════════════ */
+    .chat-section {
+      background: var(--color-chat-bg);
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c7bfb2' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .chat-section .section-title {
+      color: var(--color-primary-dark);
+    }
+    .chat-list {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .chat-bubble {
+      background: var(--color-chat-bubble);
+      border-radius: 0 var(--radius) var(--radius) var(--radius);
+      padding: 12px 14px;
+      position: relative;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+      max-width: 92%;
+    }
+    .chat-bubble::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -8px;
+      width: 0;
+      height: 0;
+      border-top: 0 solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 10px solid var(--color-chat-bubble);
+    }
+    .chat-name {
+      font-weight: 700;
+      font-size: 0.8125rem;
+      color: var(--color-green-dark);
+      margin-bottom: 4px;
+    }
+    .chat-text {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      color: var(--color-text);
+    }
+    .chat-meta {
+      text-align: right;
+      font-size: 0.6875rem;
+      color: var(--color-text-muted);
+      margin-top: 6px;
+    }
+    .chat-meta .checks {
+      color: #53BDEB;
+      font-weight: 700;
+    }
+
+    /* ══════════════════════════════
+       4. ANTES E DEPOIS
+    ══════════════════════════════ */
+    .transform-section {
+      background: var(--color-white);
+    }
+    .transform-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .transform-card {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .transform-card .img-placeholder {
+      height: 200px;
+      border-radius: 0;
+    }
+    .transform-card img {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0;
+    }
+    .transform-card.before .img-placeholder {
+      background: #E8D5D5;
+      color: var(--color-before);
+    }
+    .transform-card.after .img-placeholder {
+      background: #D5E8D5;
+      color: var(--color-after);
+    }
+    .transform-label {
+      padding: 12px 16px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+    .transform-card.before .transform-label {
+      background: var(--color-before);
+      color: var(--color-white);
+    }
+    .transform-card.after .transform-label {
+      background: var(--color-after);
+      color: var(--color-white);
+    }
+
+    /* ══════════════════════════════
+       5. O QUE VAIS RECEBER
+    ══════════════════════════════ */
+    .ebooks-section {
+      background: var(--color-cream);
+    }
+    .ebooks-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 560px;
+      margin: 0 auto 32px;
+    }
+    .ebook-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      transition: transform 0.2s ease;
+    }
+    .ebook-card:hover {
+      transform: translateY(-2px);
+    }
+    .ebook-num {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-caramel));
+      color: var(--color-white);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.875rem;
+      font-family: var(--font-heading);
+    }
+    .ebook-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 4px;
+    }
+    .ebook-info p {
+      font-size: 0.8375rem;
+      color: var(--color-text-light);
+      line-height: 1.5;
+    }
+    .ebook-card.bonus {
+      background: linear-gradient(135deg, var(--color-gold), var(--color-caramel));
+      color: var(--color-white);
+      border: 2px solid var(--color-gold);
+    }
+    .ebook-card.bonus .ebook-num {
+      background: rgba(255,255,255,0.25);
+    }
+    .ebook-card.bonus .ebook-info h3 {
+      color: var(--color-white);
+    }
+    .ebook-card.bonus .ebook-info p {
+      color: rgba(255,255,255,0.9);
+    }
+    .ebooks-section .cta-wrap {
+      text-align: center;
+    }
+
+    /* ══════════════════════════════
+       6. 4 VANTAGENS
+    ══════════════════════════════ */
+    .advantages-section {
+      background: var(--color-white);
+    }
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      max-width: 560px;
+      margin: 0 auto 32px;
+    }
+    .advantage-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .advantage-num {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: var(--color-cream);
+      border: 2px solid var(--color-caramel);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.125rem;
+      color: var(--color-caramel);
+      font-family: var(--font-heading);
+    }
+    .advantage-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--color-primary-dark);
+      margin-bottom: 4px;
+    }
+    .advantage-card p {
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      line-height: 1.55;
+    }
+
+    /* ══════════════════════════════
+       7. RESULTADOS REAIS
+    ══════════════════════════════ */
+    .results-section {
+      background: var(--color-cream);
+    }
+    .testimonials {
+      max-width: 560px;
+      margin: 0 auto 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .testimonial-card {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+    .testimonial-card::before {
+      content: '"';
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      color: var(--color-caramel);
+      opacity: 0.3;
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      line-height: 1;
+    }
+    .testimonial-text {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--color-text);
+      font-style: italic;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .testimonial-star {
+      color: var(--color-star);
+      font-size: 1rem;
+    }
+    .testimonial-name {
+      font-weight: 700;
+      font-size: 0.875rem;
+      color: var(--color-primary-dark);
+    }
+
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .stat-item {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      padding: 20px 12px;
+      box-shadow: var(--shadow);
+    }
+    .stat-num {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--color-caramel);
+      line-height: 1.2;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+
+    /* ══════════════════════════════
+       PLANOS
+    ══════════════════════════════ */
+    .plans-section {
+      background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+      color: var(--color-white);
+    }
+    .plans-section .section-title {
+      color: var(--color-white);
+    }
+    .plans-pretitle {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--color-gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .plans-grid {
+      display: flex;
+      flex-direction: column-reverse; /* premium primeiro em mobile */
+      gap: 20px;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    @media (min-width: 640px) {
+      .plans-grid {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+    /* --- card base --- */
+    .plan-card {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.08);
+      border: 2px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      color: var(--color-white);
+    }
+    /* --- card premium --- */
+    .plan-card.premium {
+      border-color: var(--color-gold);
+      box-shadow: 0 8px 40px rgba(196, 137, 59, 0.35);
+      position: relative;
+      background: rgba(255, 255, 255, 0.12);
+    }
+    @media (min-width: 640px) {
+      .plan-card.premium {
+        transform: translateY(-8px);
+      }
+    }
+    .plan-best-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--color-gold);
+      color: var(--color-white);
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 5px 16px;
+      border-radius: 50px;
+      white-space: nowrap;
+    }
+    .plan-label {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 50px;
+      align-self: flex-start;
+    }
+    .plan-card:not(.premium) .plan-label {
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.75);
+    }
+    .plan-card.premium .plan-label {
+      background: linear-gradient(135deg, var(--color-gold), var(--color-caramel));
+      color: var(--color-white);
+    }
+    .plan-name {
+      font-family: var(--font-heading);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin: 0;
+    }
+    .plan-price {
+      line-height: 1.2;
+    }
+    .plan-price-num {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--color-white);
+    }
+    .plan-card.premium .plan-price-num {
+      color: var(--color-gold);
+    }
+    .plan-price-note {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,0.6);
+      margin-top: 2px;
+    }
+    .plan-upsell {
+      font-size: 0.8125rem;
+      color: var(--color-gold);
+      font-weight: 600;
+      font-style: italic;
+      margin-top: -4px;
+    }
+    .plan-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin: 4px 0;
+    }
+    .plan-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .plan-list li {
+      font-size: 0.875rem;
+      line-height: 1.4;
+      display: flex;
+      gap: 8px;
+    }
+    .plan-list li .chk {
+      flex-shrink: 0;
+      font-weight: 700;
+      color: #5EDA8E;
+    }
+    .plan-list li .nope {
+      flex-shrink: 0;
+      font-weight: 700;
+      color: rgba(255,255,255,0.35);
+    }
+    .plan-list li.no {
+      color: rgba(255,255,255,0.35);
+      opacity: 1;
+    }
+    .plan-btn {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-top: auto;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .plan-btn.basic {
+      background: rgba(255,255,255,0.12);
+      color: var(--color-white);
+      border: 2px solid rgba(255,255,255,0.3);
+    }
+    .plan-btn.basic:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-1px);
+    }
+    .plan-btn.premium-cta {
+      background: var(--color-cta);
+      color: var(--color-white);
+      box-shadow: 0 4px 16px rgba(232, 73, 29, 0.3);
+      animation: pulse 2s infinite;
+    }
+    .plan-btn.premium-cta:hover {
+      background: var(--color-cta-hover);
+      transform: translateY(-2px);
+    }
+    .plans-guarantee {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .guarantee-seal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin: 24px auto 0;
+      padding: 20px 24px;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid var(--color-gold);
+      border-radius: var(--radius);
+      text-align: center;
+      color: var(--color-white);
+      line-height: 1.5;
+    }
+    .guarantee-seal .seal-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+    .guarantee-seal .seal-title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .guarantee-seal .seal-text {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+    .offer-guarantee {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.875rem;
+      opacity: 0.9;
+      line-height: 1.5;
+    }
+
+    /* ══════════════════════════════
+       9. CHEF MATILDE
+    ══════════════════════════════ */
+    .chef-section {
+      background: var(--color-white);
+    }
+    .chef-content {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .chef-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 24px;
+      border: 4px solid var(--color-caramel);
+    }
+    .chef-content p {
+      font-size: 0.9375rem;
+      color: var(--color-text-light);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+    .chef-stats {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    .chef-stat {
+      text-align: center;
+    }
+    .chef-stat strong {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-caramel);
+    }
+    .chef-stat span {
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ══════════════════════════════
+       10. FAQ
+    ══════════════════════════════ */
+    .faq-section {
+      background: var(--color-cream);
+    }
+    .faq-list {
+      max-width: 560px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-item {
+      background: var(--color-white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(44,24,16,0.05);
+    }
+    .faq-question {
+      width: 100%;
+      padding: 18px 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      text-align: left;
+      line-height: 1.4;
+    }
+    .faq-question:hover {
+      color: var(--color-caramel);
+    }
+    .faq-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--color-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      color: var(--color-caramel);
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-answer-inner {
+      padding: 0 20px 18px;
+      font-size: 0.875rem;
+      color: var(--color-text-light);
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════
+       11. FECHO
+    ══════════════════════════════ */
+    .close-section {
+      background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+      color: var(--color-white);
+      text-align: center;
+    }
+    .close-section .section-title {
+      color: var(--color-white);
+    }
+    .close-section p {
+      max-width: 520px;
+      margin: 0 auto 28px;
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      opacity: 0.92;
+    }
+
+    /* ══════════════════════════════
+       12. RODAPÉ
+    ══════════════════════════════ */
+    footer {
+      background: var(--color-text);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 32px 20px;
+      font-size: 0.75rem;
+      line-height: 1.6;
+    }
+    footer strong {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.8125rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+    footer a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: underline;
+    }
+
+
+    /* ══════════════════════════════
+       RESPONSIVE — tablet/desktop
+    ══════════════════════════════ */
+    @media (min-width: 640px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero h1 span {
+        font-size: 1.5rem;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+      .ebooks-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .stats-bar {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .advantages-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .hero h1 {
+        font-size: 2.75rem;
+      }
+      .section-title {
+        font-size: 2.25rem;
+      }
+      section {
+        padding: 72px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════════════
+       1. HERO
+  ════════════════════════════════════════════ -->
+  <section class="hero" id="topo">
+    <div class="container">
+      <div class="hero-topline">⚡ 11 E-BOOKS + 100+ RECEITAS + ACESSO VITALÍCIO</div>
+    </div>
+
+    <!-- Carrossel de capas — loop infinito -->
+    <div class="carousel-wrap">
+      <div class="carousel-track">
+        <!-- Série 1 -->
+        <img src="https://i.postimg.cc/yxXj2Hbn/ChatGPT-Image-30-de-jun-de-2026-22-07-53.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/ZnFHXSMP/ChatGPT-Image-30-de-jun-de-2026-22-07-57.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/cCMhPSbf/ChatGPT-Image-30-de-jun-de-2026-22-08-00.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/6qNzH3Y5/ChatGPT-Image-30-de-jun-de-2026-22-08-02.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/V6tDBMBL/ChatGPT-Image-30-de-jun-de-2026-22-08-04.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/0QScdmd9/ChatGPT-Image-30-de-jun-de-2026-22-08-05.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/pTjqY8Yx/ChatGPT-Image-30-de-jun-de-2026-22-08-06.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/4dcBbtbs/ChatGPT-Image-30-de-jun-de-2026-22-08-08.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/MTBdbRbw/ChatGPT-Image-30-de-jun-de-2026-22-08-09.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/hjmpbx8C/ChatGPT-Image-30-de-jun-de-2026-22-08-17.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/x8RGtPXR/ChatGPT-Image-30-de-jun-de-2026-22-11-00.png" alt="Capa de e-book Matilde Salgados">
+        <!-- Série 2 (duplicada para loop contínuo sem corte) -->
+        <img src="https://i.postimg.cc/yxXj2Hbn/ChatGPT-Image-30-de-jun-de-2026-22-07-53.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/ZnFHXSMP/ChatGPT-Image-30-de-jun-de-2026-22-07-57.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/cCMhPSbf/ChatGPT-Image-30-de-jun-de-2026-22-08-00.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/6qNzH3Y5/ChatGPT-Image-30-de-jun-de-2026-22-08-02.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/V6tDBMBL/ChatGPT-Image-30-de-jun-de-2026-22-08-04.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/0QScdmd9/ChatGPT-Image-30-de-jun-de-2026-22-08-05.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/pTjqY8Yx/ChatGPT-Image-30-de-jun-de-2026-22-08-06.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/4dcBbtbs/ChatGPT-Image-30-de-jun-de-2026-22-08-08.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/MTBdbRbw/ChatGPT-Image-30-de-jun-de-2026-22-08-09.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/hjmpbx8C/ChatGPT-Image-30-de-jun-de-2026-22-08-17.png" alt="Capa de e-book Matilde Salgados">
+        <img src="https://i.postimg.cc/x8RGtPXR/ChatGPT-Image-30-de-jun-de-2026-22-11-00.png" alt="Capa de e-book Matilde Salgados">
+      </div>
+    </div>
+
+    <div class="container">
+      <h1>
+        Pack de E-books do Salgadeiro Profissional
+        <span>11 E-books + 100+ Receitas</span>
+      </h1>
+
+      <p class="hero-desc">Receitas secretas e simples para fazeres em casa, mesmo que nunca tenhas feito um salgado na vida — e começa a ganhar mais de 100&nbsp;€/dia já hoje!</p>
+
+      <div class="price-box">
+        <div class="price-calc">Cada e-book vale 7,90&nbsp;€ em separado · 11 × 7,90&nbsp;€ =</div>
+        <div class="price-old">86,90&nbsp;€</div>
+        <div class="price-new">7,90&nbsp;€</div>
+        <div class="price-badge">Pagamento único · 91% de desconto</div>
+      </div>
+
+      <!-- CTA — substituir #CHECKOUT_URL pelo link do checkout -->
+      <a href="#planos" class="cta-btn">QUERO O PACK AGORA!</a>
+      <p class="hero-access">Acesso imediato por e-mail</p>
+
+      <div class="hero-bonus">🎁 BÓNUS GRÁTIS: Receitas Bónus de Doces + Tabela de Preços do Salgadeiro</div>
+      <p class="hero-chef">Chef Matilde — Salgadeira</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       EXPERT IMAGE
+  ════════════════════════════════════════════ -->
+  <section class="expert-section">
+    <!-- substituir IMG_EXPERT pelo caminho/URL da foto da expert -->
+    <img src="https://i.postimg.cc/764kC1WB/ChatGPT-Image-29-de-jun-de-2026-21-05-55-1.png" alt="Chef especialista em salgados" class="reveal">
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       2. IDENTIFICAS-TE?
+  ════════════════════════════════════════════ -->
+  <section class="pain-section" id="dores">
+    <div class="container">
+      <h2 class="section-title reveal">Se sentes pelo menos uma destas dores, este pack é para ti:</h2>
+
+      <ul class="pain-list reveal">
+        <li>😤 Trabalhas muito e ganhas pouco. Chegas ao fim do mês e o dinheiro mal chega para as contas básicas.</li>
+        <li>😰 Não sabes fazer salgados bonitos, sequinhos e que não rebentam na fritura.</li>
+        <li>🤷‍♀️ Não sabes vender — fazes bons salgados, mas ficas à espera que o cliente apareça e ninguém compra.</li>
+        <li>📉 A concorrência vende muito barato e não sabes como competir sem perderes dinheiro.</li>
+        <li>😔 Sonhas em ter o teu próprio negócio, mas tens medo de investir e perder o pouco que tens.</li>
+      </ul>
+
+      <div class="pain-story reveal">
+        <p>Sei exatamente como te sentes, porque já estive no mesmo lugar...</p>
+        <span class="arrow">↓</span>
+        <p>Comecei como empregada doméstica, a ganhar uma miséria ao fim do mês. Hoje tenho a minha própria fábrica de salgados e já ajudei milhares de pessoas a mudar de vida.</p>
+      </div>
+
+      <div class="cta-wrap reveal">
+        <!-- CTA — substituir #CHECKOUT_URL pelo link do checkout -->
+        <a href="#planos" class="cta-btn">QUERO AS RECEITAS, CHEF MATILDE!<span class="cta-sub">Começo a aprender já hoje</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       3. MENSAGENS REAIS (WhatsApp)
+  ════════════════════════════════════════════ -->
+  <section class="chat-section">
+    <div class="container">
+      <h2 class="section-title reveal">O Que as Alunas Mandam à Matilde</h2>
+
+      <div class="chat-list">
+        <div class="chat-bubble reveal">
+          <div class="chat-name">Conceição</div>
+          <div class="chat-text">Matilde, comecei a vender a semana passada e já fiz 480&nbsp;€! Só com rissóis e croquetes. Estou em choque! 😍</div>
+          <div class="chat-meta">14:32 <span class="checks">✓✓</span></div>
+        </div>
+        <div class="chat-bubble reveal">
+          <div class="chat-name">Dona Lurdes</div>
+          <div class="chat-text">Matilde, os meus salgados deixaram de rebentar na fritura!! Finalmente percebi o segredo de panar, muito obrigada 🙏</div>
+          <div class="chat-meta">09:15 <span class="checks">✓✓</span></div>
+        </div>
+        <div class="chat-bubble reveal">
+          <div class="chat-name">Patrícia</div>
+          <div class="chat-text">Olá Matilde! Vendi 300 salgados num só sábado! Os clientes ligam a pedir mais. As receitas são perfeitas!</div>
+          <div class="chat-meta">18:03 <span class="checks">✓✓</span></div>
+        </div>
+        <div class="chat-bubble reveal">
+          <div class="chat-name">Sandra</div>
+          <div class="chat-text">Matilde, nunca tinha feito um salgado na vida. Segui a receita da massa base e ficou PERFEITO à primeira! 🎉</div>
+          <div class="chat-meta">10:22 <span class="checks">✓✓</span></div>
+        </div>
+        <div class="chat-bubble reveal">
+          <div class="chat-name">Mariana</div>
+          <div class="chat-text">Matilde, já tenho 12 clientes fixos por mês. Tudo começou com estes e-books. Mudou-me a vida! ❤️</div>
+          <div class="chat-meta">16:47 <span class="checks">✓✓</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       4. ANTES E DEPOIS
+  ════════════════════════════════════════════ -->
+  <section class="transform-section">
+    <div class="container">
+      <h2 class="section-title reveal">Transformação Real — Antes e Depois de Aplicar o Método da Chef Matilde</h2>
+
+      <div class="transform-grid reveal">
+        <div class="transform-card before">
+          <img src="https://i.postimg.cc/SN9jzdT9/ChatGPT-Image-29-de-jun-de-2026-21-53-16.png" alt="Salgados antes do método — sem forma, rebentados e oleosos">
+          <div class="transform-label">❌ Antes — Sem forma, rebentados, oleosos</div>
+        </div>
+        <div class="transform-card after">
+          <img src="https://i.postimg.cc/TYbhW07W/ChatGPT-Image-29-de-jun-de-2026-21-53-20.png" alt="Salgados depois do método — dourados, estaladiços e perfeitos">
+          <div class="transform-label">✅ Depois — Dourados, estaladiços, perfeitos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       5. O QUE VAIS RECEBER
+  ════════════════════════════════════════════ -->
+  <section class="ebooks-section" id="ebooks">
+    <div class="container">
+      <h2 class="section-title reveal">11 e-books com mais de 100 receitas para saíres do zero ao salgadeiro profissional</h2>
+      <p class="section-subtitle reveal">Tudo o que precisas: receitas, fritura, legalização, festas e muito mais.</p>
+
+      <div class="ebooks-grid">
+        <div class="ebook-card reveal">
+          <div class="ebook-num">01</div>
+          <div class="ebook-info">
+            <h3>E-book Salgadeiro Profissional</h3>
+            <p>O e-book central, com técnicas profissionais para deixares de ser amador e te tornares uma referência.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">02</div>
+          <div class="ebook-info">
+            <h3>Receitas Para Iniciantes</h3>
+            <p>Começa do zero com receitas testadas e aprovadas, mesmo que nunca tenhas posto as mãos na massa.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">03</div>
+          <div class="ebook-info">
+            <h3>Manual de Cozinha</h3>
+            <p>Os fundamentos de cozinha que qualquer salgadeira precisa de dominar antes de produzir em grande escala.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">04</div>
+          <div class="ebook-info">
+            <h3>Manual de Fritura</h3>
+            <p>O ponto exato da fritura para salgados dourados, estaladiços e que não rebentam.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">05</div>
+          <div class="ebook-info">
+            <h3>Guia de Recibos Verdes &amp; Legalização</h3>
+            <p>Legaliza o teu negócio passo a passo: abre atividade nas Finanças, emite faturas-recibo, paga menos impostos e cresce em segurança.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">06</div>
+          <div class="ebook-info">
+            <h3>Manual para Festas e Eventos</h3>
+            <p>Como servir festas, montar a ementa e fechar contratos que rendem milhares por evento.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">07</div>
+          <div class="ebook-info">
+            <h3>Kit Festas &amp; Packs</h3>
+            <p>Estratégias de kits e packs prontos para venderes mais por cliente sem aumentares os custos.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">08</div>
+          <div class="ebook-info">
+            <h3>Empadas</h3>
+            <p>Receitas e técnicas das empadas que se tornam as queridinhas da ementa e fidelizam clientes.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">09</div>
+          <div class="ebook-info">
+            <h3>Massa de Nhoque</h3>
+            <p>Aprende a massa de nhoque profissional para diversificares e atraíres novos clientes.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">10</div>
+          <div class="ebook-info">
+            <h3>Churros</h3>
+            <p>Como produzir e vender churros recheados com margem alta — um produto que escala com facilidade.</p>
+          </div>
+        </div>
+        <div class="ebook-card reveal">
+          <div class="ebook-num">11</div>
+          <div class="ebook-info">
+            <h3>E-book Fit</h3>
+            <p>Salgados fit para servires o público que quer comer bem sem sair da dieta.</p>
+          </div>
+        </div>
+
+        <!-- Bónus -->
+        <div class="ebook-card bonus reveal">
+          <div class="ebook-num">🎁</div>
+          <div class="ebook-info">
+            <h3>BÓNUS 1 — Receitas Bónus de Doces</h3>
+            <p>Um e-book extra com receitas de doces campeões de venda (bolas de Berlim, brigadeiros, pastéis de nata e mais) para venderes doce e salgado ao mesmo cliente e faturares mais por encomenda.</p>
+          </div>
+        </div>
+        <div class="ebook-card bonus reveal">
+          <div class="ebook-num">🎁</div>
+          <div class="ebook-info">
+            <h3>BÓNUS 2 — Tabela de Preços do Salgadeiro</h3>
+            <p>A tabela que te diz exatamente quanto cobrar por cento e por evento, com a margem de lucro já calculada. Nunca mais vendes barato demais nem perdes dinheiro sem saber.</p>
+          </div>
+        </div>
+        <div class="ebook-card bonus reveal">
+          <div class="ebook-num">🎁</div>
+          <div class="ebook-info">
+            <h3>EXCLUSIVO — Bónus Surpresa</h3>
+            <p>Ao entrares no pack, vais encontrar um presente extra que preparámos para te dar ainda mais valor — uma pequena surpresa para começares com o pé direito.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap reveal">
+        <!-- CTA — substituir #CHECKOUT_URL pelo link do checkout -->
+        <a href="#planos" class="cta-btn">QUERO O PACK AGORA!<span class="cta-sub">Acesso imediato após o pagamento</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       6. 4 VANTAGENS
+  ════════════════════════════════════════════ -->
+  <section class="advantages-section">
+    <div class="container">
+      <h2 class="section-title reveal">4 Vantagens de Adquirir as Receitas</h2>
+
+      <div class="advantages-grid">
+        <div class="advantage-card reveal">
+          <div class="advantage-num">1</div>
+          <div>
+            <h3>Começa com pouco investimento</h3>
+            <p>Não precisas de máquinas caras. Começa com o que tens na tua cozinha e vai crescendo à medida que as vendas aumentam.</p>
+          </div>
+        </div>
+        <div class="advantage-card reveal">
+          <div class="advantage-num">2</div>
+          <div>
+            <h3>Trabalha no conforto da tua casa</h3>
+            <p>Sem patrão, sem horário fixo. Monta o teu negócio sem saíres de casa, perto da tua família e dos teus filhos.</p>
+          </div>
+        </div>
+        <div class="advantage-card reveal">
+          <div class="advantage-num">3</div>
+          <div>
+            <h3>Receitas simples e práticas</h3>
+            <p>São mais de 100 receitas distribuídas por 11 e-books, todas pensadas para iniciantes. Tudo explicado de forma clara para pores, literalmente, as mãos na massa.</p>
+          </div>
+        </div>
+        <div class="advantage-card reveal">
+          <div class="advantage-num">4</div>
+          <div>
+            <h3>Ganha tempo (e dinheiro)</h3>
+            <p>Para de perder horas no YouTube à procura de receitas que não funcionam. Aqui está tudo organizado e testado.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-wrap reveal" style="text-align:center">
+        <!-- CTA — substituir #CHECKOUT_URL pelo link do checkout -->
+        <a href="#planos" class="cta-btn">QUERO O PACK, CHEF MATILDE!<span class="cta-sub">Começo a aprender já hoje</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       7. RESULTADOS REAIS
+  ════════════════════════════════════════════ -->
+  <section class="results-section">
+    <div class="container">
+      <h2 class="section-title reveal">Resultados Reais — O Que Dizem Sobre as Receitas</h2>
+      <p class="section-subtitle reveal">Pessoas comuns que decidiram mudar de vida com salgados</p>
+
+      <div class="testimonials">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">Passei a vender muito por recomendação depois de usar as receitas dos e-books. Os meus clientes pedem sempre mais!</p>
+          <div class="testimonial-author">
+            <span class="testimonial-star">⭐</span>
+            <span class="testimonial-name">Maria da Conceição</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">A nossa banca vende quase 2 mil salgados por dia. Tudo começou com as receitas da Matilde!</p>
+          <div class="testimonial-author">
+            <span class="testimonial-star">⭐</span>
+            <span class="testimonial-name">Filipe Basílio</span>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">Eu nem sabia fritar um salgado em condições. Hoje tenho clientes fixos e já estou a pensar comprar a minha primeira máquina!</p>
+          <div class="testimonial-author">
+            <span class="testimonial-star">⭐</span>
+            <span class="testimonial-name">Joana Oliveira</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-bar reveal">
+        <div class="stat-item">
+          <div class="stat-num">11</div>
+          <div class="stat-label">E-books completos</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Receitas testadas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">13</div>
+          <div class="stat-label">Materiais no pack</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">14 dias</div>
+          <div class="stat-label">Garantia total</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       PLANOS
+  ════════════════════════════════════════════ -->
+  <section class="plans-section" id="planos">
+    <div class="container">
+      <p class="plans-pretitle reveal">ESCOLHE O TEU ACESSO</p>
+      <h2 class="section-title reveal">Dois planos, uma decisão que muda o teu futuro</h2>
+
+      <div class="plans-grid">
+
+        <!-- CARD PREMIUM (primeiro em mobile graças a column-reverse) -->
+        <div class="plan-card premium reveal">
+          <span class="plan-best-badge">⭐ MELHOR VALOR</span>
+          <span class="plan-label">COMPLETO</span>
+          <h3 class="plan-name">Pack Premium</h3>
+          <div class="plan-price">
+            <div class="plan-price-num">14,90&nbsp;€</div>
+            <div class="plan-price-note">pagamento único</div>
+          </div>
+          <p class="plan-upsell">Por menos de 2×, recebes muito mais</p>
+          <hr class="plan-divider">
+          <ul class="plan-list">
+            <li><span class="chk">✓</span><span>TUDO do plano Básico</span></li>
+            <li><span class="chk">✓</span><span>Área de Membros premium (ler online + descarregar)</span></li>
+            <li><span class="chk">✓</span><span>Bónus 1 — Receitas de Doces (14 receitas)</span></li>
+            <li><span class="chk">✓</span><span>Bónus 2 — Tabela de Preços + Calculadora em Excel</span></li>
+            <li><span class="chk">✓</span><span>Certificado de Conclusão</span></li>
+            <li><span class="chk">✓</span><span>Modelos Prontos (menu, encomendas, etiquetas)</span></li>
+            <li><span class="chk">✓</span><span>Guia de Compras &amp; Fornecedores</span></li>
+          </ul>
+          <a href="https://pay.hotmart.com/H106560628F?off=de1qz0mr" target="_blank" rel="noopener" class="plan-btn premium-cta">QUERO O PREMIUM</a>
+        </div>
+
+        <!-- CARD BÁSICO -->
+        <div class="plan-card reveal">
+          <span class="plan-label">ESSENCIAL</span>
+          <h3 class="plan-name">Pack Básico</h3>
+          <div class="plan-price">
+            <div class="plan-price-num">7,90&nbsp;€</div>
+            <div class="plan-price-note">pagamento único</div>
+          </div>
+          <hr class="plan-divider">
+          <ul class="plan-list">
+            <li><span class="chk">✓</span><span>11 e-books completos</span></li>
+            <li><span class="chk">✓</span><span>Mais de 100 receitas</span></li>
+            <li><span class="chk">✓</span><span>Acesso imediato por e-mail</span></li>
+            <li><span class="chk">✓</span><span>Ficheiros para descarregar</span></li>
+            <li class="no"><span class="nope">✕</span><span>Área de membros premium</span></li>
+            <li class="no"><span class="nope">✕</span><span>Bónus exclusivos</span></li>
+            <li class="no"><span class="nope">✕</span><span>Certificado de conclusão</span></li>
+            <li class="no"><span class="nope">✕</span><span>Modelos prontos e guia de compras</span></li>
+          </ul>
+          <a href="https://pay.hotmart.com/H106560628F?off=4nr0432q" target="_blank" rel="noopener" class="plan-btn basic">QUERO O BÁSICO</a>
+        </div>
+
+      </div>
+
+      <!-- Selo de garantia -->
+      <div class="guarantee-seal plans-guarantee reveal">
+        <span class="seal-icon">🛡️</span>
+        <span class="seal-title">Garantia de 14 dias</span>
+        <span class="seal-text">Se não gostares, devolvo 100% do teu dinheiro. Sem burocracia.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       9. CONHECE A CHEF MATILDE
+  ════════════════════════════════════════════ -->
+  <section class="chef-section">
+    <div class="container">
+      <h2 class="section-title reveal">Conhece a Chef Matilde</h2>
+
+      <div class="chef-content reveal">
+        <img src="https://i.postimg.cc/wM2zhtNY/Chat-GPT-Image-29-de-jun-de-2026-22-04-30.png" alt="Foto da Chef Matilde" class="chef-photo">
+
+        <p>Olá, o meu nome é Matilde! Sou salgadeira profissional e, ao longo de mais de 15 anos, fiz dos salgados o meu modo de vida — primeiro na cozinha lá de casa, depois a fornecer festas, cafés e eventos por toda a região.</p>
+        <p>Durante anos guardei as minhas receitas e os meus truques só para mim. Foi quando comecei a ensinar outras pessoas que percebi a diferença que isto pode fazer: gente que nunca tinha frito um salgado a montar o seu próprio negócio e a faturar a partir de casa.</p>
+        <p>Reuni tudo o que aprendi nestes e-books, explicado passo a passo, para que tu também consigas — mesmo a começar do zero. Se eu consegui, tu também consegues!</p>
+
+        <div class="chef-stats">
+          <div class="chef-stat">
+            <strong>15+</strong>
+            <span>Anos de Experiência</span>
+          </div>
+          <div class="chef-stat">
+            <strong>100+</strong>
+            <span>Receitas Testadas</span>
+          </div>
+          <div class="chef-stat">
+            <strong>1000+</strong>
+            <span>Alunos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       10. FAQ
+  ════════════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">Dúvidas Mais Comuns</h2>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>Como recebo o pack?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">Logo após a confirmação do pagamento, recebes um e-mail automático com o acesso a todos os e-books. É tudo digital — abres e começas a usar no telemóvel, tablet ou computador.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vou receber alguma coisa em casa?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">Não. É um produto 100% digital, não há envio de nada em papel. Recebes tudo por e-mail e podes consultar quando e onde quiseres, para sempre.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>E se eu não gostar?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">Tens 14 dias de garantia. Se sentires que não é para ti, basta enviares uma mensagem e devolvemos 100% do valor — sem perguntas e sem burocracia.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>Preciso de máquina para fazer as receitas?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">Não. Podes começar com os utensílios que já tens em casa. As máquinas ajudam a produzir em maior quantidade, mas só fazem sentido quando as vendas crescerem.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>Nunca fiz salgados. Vou conseguir?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">Sim! As receitas foram pensadas para iniciantes, com o passo a passo explicado de forma simples. Milhares de pessoas que nunca tinham feito um salgado começaram exatamente por aqui.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-question" aria-expanded="false">
+            <span>O pack tem apoio?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">Tem. Além dos e-books, recebes dois bónus exclusivos: as Receitas Bónus de Doces e a Tabela de Preços do Salgadeiro — para começares a vender com confiança e a cobrar o valor certo desde o primeiro dia.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       11. FECHO
+  ════════════════════════════════════════════ -->
+  <section class="close-section" id="fecho">
+    <div class="container">
+      <h2 class="section-title reveal">Chega de enriquecer o patrão. Chegou a tua vez.</h2>
+
+      <p class="reveal">Cada um dos 11 e-books é vendido a 7,90&nbsp;€ em separado — daria 86,90&nbsp;€ no total. Hoje, levas o pack completo, com mais de 100 receitas, por 7,90&nbsp;€. Lembra-te: uma decisão muda tudo.</p>
+
+      <div class="cta-wrap reveal" style="text-align:center">
+        <!-- CTA — substituir #CHECKOUT_URL pelo link do checkout -->
+        <a href="#planos" class="cta-btn">QUERO MUDAR DE VIDA AGORA!<span class="cta-sub">Pagamento único · Acesso imediato</span></a>
+      </div>
+
+      <div class="guarantee-seal reveal">
+        <span class="seal-icon">🛡️</span>
+        <span class="seal-title">Garantia de 14 dias</span>
+        <span class="seal-text">Se não gostares, devolvo 100% do teu dinheiro. Sem burocracia.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       12. RODAPÉ
+  ════════════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <strong>Matilde Salgados</strong>
+      <p>As informações e os números apresentados nesta página representam os resultados da autora, Matilde Salgados, e de quem partilhou o seu testemunho. Os teus resultados poderão ser diferentes.</p>
+      <p style="margin-top:12px">2025 – Matilde Salgados – NIF/NIPC [a preencher] · <a href="#">Política de Privacidade</a></p>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <script>
+    (function () {
+      // Reveal on scroll
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { observer.observe(el); });
+
+      // FAQ accordion
+      var faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(function (item) {
+        var btn = item.querySelector('.faq-question');
+        var answer = item.querySelector('.faq-answer');
+
+        btn.addEventListener('click', function () {
+          var isOpen = item.classList.contains('open');
+
+          // Close all
+          faqItems.forEach(function (other) {
+            other.classList.remove('open');
+            other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            other.querySelector('.faq-answer').style.maxHeight = null;
+          });
+
+          // Open clicked (if wasn't open)
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+          }
+        });
+      });
+
+      // Smooth scroll for CTA buttons pointing to #planos or other anchors
+      document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var href = link.getAttribute('href');
+          if (!href.startsWith('#')) return; // link externo — não fazer scroll
+          var target = document.querySelector(href);
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
