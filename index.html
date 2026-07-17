@@ -672,59 +672,85 @@
     }
 
     /* ══════════════════════════════
+       CARROSSEL WHATSAPP
+    ══════════════════════════════ */
+    .wa-carousel {
+      position: relative;
+      max-width: 340px;
+      margin: 0 auto 40px;
+    }
+    .wa-track-wrap {
+      overflow: hidden;
+      border-radius: 18px;
+    }
+    .wa-track {
+      display: flex;
+      transition: transform 0.4s ease;
+    }
+    .wa-track img {
+      flex-shrink: 0;
+      width: 100%;
+      max-height: 560px;
+      object-fit: contain;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(44,24,16,0.18);
+      background: var(--color-cream-dark);
+      display: block;
+    }
+    .wa-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: var(--color-caramel);
+      color: var(--color-white);
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.125rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: background 0.2s, transform 0.15s;
+      z-index: 2;
+    }
+    .wa-arrow:hover { background: var(--color-primary); transform: translateY(-50%) scale(1.08); }
+    .wa-arrow.prev { left: -20px; }
+    .wa-arrow.next { right: -20px; }
+    .wa-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .wa-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-border);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s, transform 0.2s;
+    }
+    .wa-dot.active {
+      background: var(--color-caramel);
+      transform: scale(1.3);
+    }
+    @media (min-width: 640px) {
+      .wa-carousel { max-width: 380px; }
+      .wa-arrow.prev { left: -24px; }
+      .wa-arrow.next { right: -24px; }
+    }
+
+    /* ══════════════════════════════
        7. RESULTADOS REAIS
     ══════════════════════════════ */
     .results-section {
       background: var(--color-cream);
     }
-    .testimonials {
-      max-width: 560px;
-      margin: 0 auto 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .testimonial-card {
-      background: var(--color-white);
-      border-radius: var(--radius);
-      padding: 24px 20px;
-      box-shadow: var(--shadow);
-      position: relative;
-    }
-    .testimonial-card::before {
-      content: '"';
-      font-family: var(--font-heading);
-      font-size: 3.5rem;
-      color: var(--color-caramel);
-      opacity: 0.3;
-      position: absolute;
-      top: 8px;
-      left: 16px;
-      line-height: 1;
-    }
-    .testimonial-text {
-      font-size: 0.9375rem;
-      line-height: 1.6;
-      color: var(--color-text);
-      font-style: italic;
-      margin-bottom: 12px;
-      padding-left: 4px;
-    }
-    .testimonial-author {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .testimonial-star {
-      color: var(--color-star);
-      font-size: 1rem;
-    }
-    .testimonial-name {
-      font-weight: 700;
-      font-size: 0.875rem;
-      color: var(--color-primary-dark);
-    }
-
     .stats-bar {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -1176,7 +1202,7 @@
   ════════════════════════════════════════════ -->
   <section class="hero" id="topo">
     <div class="container">
-      <div class="hero-topline">⚡ 11 E-BOOKS + 100+ RECEITAS + ACESSO VITALÍCIO</div>
+      <div class="hero-topline">🔥 OFERTA VÁLIDA SOMENTE HOJE, <span id="data-hoje"></span></div>
     </div>
 
     <!-- Carrossel de capas — loop infinito -->
@@ -1497,27 +1523,25 @@
       <h2 class="section-title reveal">Resultados Reais — O Que Dizem Sobre as Receitas</h2>
       <p class="section-subtitle reveal">Pessoas comuns que decidiram mudar de vida com salgados</p>
 
-      <div class="testimonials">
-        <div class="testimonial-card reveal">
-          <p class="testimonial-text">Passei a vender muito por recomendação depois de usar as receitas dos e-books. Os meus clientes pedem sempre mais!</p>
-          <div class="testimonial-author">
-            <span class="testimonial-star">⭐</span>
-            <span class="testimonial-name">Maria da Conceição</span>
+      <!-- Carrossel de prints de WhatsApp -->
+      <div class="wa-carousel reveal" id="waCarousel">
+        <button class="wa-arrow prev" aria-label="Anterior">&#8592;</button>
+        <div class="wa-track-wrap">
+          <div class="wa-track" id="waTrack">
+            <img src="https://i.postimg.cc/8kfjN0yR/Chat-GPT-Image-17-de-jul-de-2026-19-30-19.png" alt="Print de conversa de WhatsApp — resultado de aluna" loading="lazy" decoding="async">
+            <img src="https://i.postimg.cc/zDHV8cdn/Chat-GPT-Image-17-de-jul-de-2026-19-30-28.png" alt="Print de conversa de WhatsApp — resultado de aluna" loading="lazy" decoding="async">
+            <img src="https://i.postimg.cc/7PJfwWBz/Chat-GPT-Image-17-de-jul-de-2026-19-30-33.png" alt="Print de conversa de WhatsApp — resultado de aluna" loading="lazy" decoding="async">
+            <img src="https://i.postimg.cc/wxR7gGWJ/Chat-GPT-Image-17-de-jul-de-2026-19-30-41.png" alt="Print de conversa de WhatsApp — resultado de aluna" loading="lazy" decoding="async">
+            <img src="https://i.postimg.cc/SQYJkvZn/Chat-GPT-Image-17-de-jul-de-2026-19-30-47.png" alt="Print de conversa de WhatsApp — resultado de aluna" loading="lazy" decoding="async">
           </div>
         </div>
-        <div class="testimonial-card reveal">
-          <p class="testimonial-text">A nossa banca vende quase 2 mil salgados por dia. Tudo começou com as receitas da Matilde!</p>
-          <div class="testimonial-author">
-            <span class="testimonial-star">⭐</span>
-            <span class="testimonial-name">Filipe Basílio</span>
-          </div>
-        </div>
-        <div class="testimonial-card reveal">
-          <p class="testimonial-text">Eu nem sabia fritar um salgado em condições. Hoje tenho clientes fixos e já estou a pensar comprar a minha primeira máquina!</p>
-          <div class="testimonial-author">
-            <span class="testimonial-star">⭐</span>
-            <span class="testimonial-name">Joana Oliveira</span>
-          </div>
+        <button class="wa-arrow next" aria-label="Seguinte">&#8594;</button>
+        <div class="wa-dots" id="waDots">
+          <button class="wa-dot active" aria-label="Imagem 1"></button>
+          <button class="wa-dot" aria-label="Imagem 2"></button>
+          <button class="wa-dot" aria-label="Imagem 3"></button>
+          <button class="wa-dot" aria-label="Imagem 4"></button>
+          <button class="wa-dot" aria-label="Imagem 5"></button>
         </div>
       </div>
 
@@ -1554,7 +1578,7 @@
 
         <!-- CARD PREMIUM (primeiro em mobile graças a column-reverse) -->
         <div class="plan-card premium reveal">
-          <span class="plan-best-badge">⭐ MELHOR VALOR</span>
+          <span class="plan-best-badge">⭐ MAIS VENDIDO</span>
           <span class="plan-label">COMPLETO</span>
           <h3 class="plan-name">Pack Premium</h3>
           <div class="plan-price">
@@ -1756,6 +1780,16 @@
       }, { threshold: 0.15 });
       reveals.forEach(function (el) { observer.observe(el); });
 
+      // Data de hoje na barra de urgência
+      (function () {
+        var d = new Date();
+        var dd = String(d.getDate()).padStart(2, '0');
+        var mm = String(d.getMonth() + 1).padStart(2, '0');
+        var aa = d.getFullYear();
+        var el = document.getElementById('data-hoje');
+        if (el) el.textContent = dd + '/' + mm + '/' + aa;
+      })();
+
       // FAQ accordion
       var faqItems = document.querySelectorAll('.faq-item');
       faqItems.forEach(function (item) {
@@ -1780,6 +1814,46 @@
           }
         });
       });
+
+      // Carrossel de prints WhatsApp
+      (function () {
+        var track = document.getElementById('waTrack');
+        var dots  = document.querySelectorAll('#waDots .wa-dot');
+        if (!track) return;
+        var total = track.children.length;
+        var cur   = 0;
+        var timer;
+
+        function goTo(idx) {
+          cur = (idx + total) % total;
+          track.style.transform = 'translateX(-' + (cur * 100) + '%)';
+          dots.forEach(function (d, i) { d.classList.toggle('active', i === cur); });
+        }
+
+        function startAuto() {
+          clearInterval(timer);
+          timer = setInterval(function () { goTo(cur + 1); }, 5000);
+        }
+
+        function stopAuto() { clearInterval(timer); }
+
+        document.querySelector('#waCarousel .prev').addEventListener('click', function () { stopAuto(); goTo(cur - 1); startAuto(); });
+        document.querySelector('#waCarousel .next').addEventListener('click', function () { stopAuto(); goTo(cur + 1); startAuto(); });
+
+        dots.forEach(function (d, i) {
+          d.addEventListener('click', function () { stopAuto(); goTo(i); startAuto(); });
+        });
+
+        // Swipe touch
+        var tx = 0;
+        track.parentElement.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; }, { passive: true });
+        track.parentElement.addEventListener('touchend', function (e) {
+          var dx = e.changedTouches[0].clientX - tx;
+          if (Math.abs(dx) > 40) { stopAuto(); goTo(dx < 0 ? cur + 1 : cur - 1); startAuto(); }
+        }, { passive: true });
+
+        startAuto();
+      })();
 
       // Smooth scroll for CTA buttons pointing to #planos or other anchors
       document.querySelectorAll('a[href^="#"]').forEach(function (link) {
