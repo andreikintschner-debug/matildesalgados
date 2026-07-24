@@ -170,20 +170,27 @@
       cursor: pointer;
       transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 16px rgba(232, 73, 29, 0.3);
-      animation: pulse 2s infinite;
+      animation: pulse 2s ease-in-out infinite;
       line-height: 1.3;
     }
     .cta-btn:hover {
       background: var(--color-cta-hover);
       transform: translateY(-2px);
       box-shadow: 0 6px 24px rgba(232, 73, 29, 0.4);
+      animation: none;
     }
     .cta-btn:active {
       transform: translateY(0);
     }
     @keyframes pulse {
-      0%, 100% { box-shadow: 0 4px 16px rgba(232, 73, 29, 0.3); }
-      50% { box-shadow: 0 4px 24px var(--color-cta-pulse), 0 0 0 8px rgba(232, 73, 29, 0.1); }
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 4px 16px rgba(232, 73, 29, 0.28);
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 6px 26px rgba(232, 73, 29, 0.46), 0 0 0 5px rgba(232, 73, 29, 0.08);
+      }
     }
     .cta-sub {
       display: block;
@@ -235,27 +242,34 @@
     .hero {
       background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-caramel) 100%);
       color: var(--color-white);
-      padding: 24px 0 48px;
+      padding: 16px 0 28px;
       text-align: center;
     }
     .hero-topline {
-      display: inline-block;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(4px);
-      padding: 8px 16px;
-      border-radius: 50px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      margin-bottom: 24px;
-      line-height: 1.4;
+      display: block;
+      width: 100%;
+      background: #8c2f1f;
+      color: #ffffff;
+      text-align: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 16px;
+      line-height: 1.3;
+    }
+    @media (min-width: 640px) {
+      .hero-topline {
+        font-size: 0.8rem;
+        padding: 8px 24px;
+      }
     }
     .hero h1 {
       font-family: var(--font-heading);
       font-size: 2rem;
       font-weight: 800;
       line-height: 1.2;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
     .hero h1 span {
       display: block;
@@ -264,11 +278,24 @@
       color: var(--color-gold);
       margin-top: 4px;
     }
+    .hero h1 span.gold {
+      display: inline;
+      font-size: inherit;
+      font-weight: inherit;
+      color: var(--color-gold);
+      margin-top: 0;
+    }
+    .hero-desc .gold {
+      color: var(--color-gold);
+      font-weight: 600;
+    }
     .hero-desc {
-      font-size: 1rem;
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      font-weight: 400;
       line-height: 1.6;
-      opacity: 0.92;
-      margin-bottom: 32px;
+      color: rgba(255, 245, 230, 0.72);
+      margin-bottom: 14px;
       max-width: 540px;
       margin-left: auto;
       margin-right: auto;
@@ -280,7 +307,7 @@
       border: 1px solid rgba(255,255,255,0.2);
       border-radius: var(--radius-lg);
       padding: 24px 20px;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
@@ -315,12 +342,12 @@
     }
 
     .hero .cta-btn {
-      margin-top: 8px;
+      margin-top: 4px;
     }
     .hero-access {
       font-size: 0.8125rem;
       opacity: 0.8;
-      margin-top: 12px;
+      margin-top: 8px;
     }
     .hero-bonus {
       background: rgba(255,255,255,0.1);
@@ -341,42 +368,65 @@
     }
 
     /* ══════════════════════════════
-       CAROUSEL
+       PROVA SOCIAL (hero)
     ══════════════════════════════ */
-    .carousel-wrap {
-      width: 100%;
-      overflow: hidden;
-      padding: 20px 0;
-      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
-      mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
-    }
-    .carousel-track {
+    .hero-social-proof {
       display: flex;
-      gap: 12px;
-      width: max-content;
-      animation: carousel-scroll 32s linear infinite;
-    }
-    .carousel-track:hover {
-      animation-play-state: paused;
-    }
-    .carousel-track img {
-      width: 120px;
-      height: 180px;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin: 12px auto 0;
+      padding: 14px 20px;
+      max-width: 340px;
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
+      text-align: center;
+    }
+    .sp-avatars {
+      display: flex;
+      justify-content: center;
+    }
+    .sp-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.85);
       object-fit: cover;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-      flex-shrink: 0;
+      margin-left: -9px;
       display: block;
     }
-    @keyframes carousel-scroll {
-      from { transform: translateX(0); }
-      to   { transform: translateX(-50%); }
+    .sp-avatar:first-child {
+      margin-left: 0;
     }
-    @media (min-width: 640px) {
-      .carousel-track img {
-        width: 155px;
-        height: 232px;
+    .sp-count {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: rgba(255, 245, 230, 0.95);
+      line-height: 1.3;
+      margin: 0;
+    }
+    .sp-rating {
+      font-size: 0.75rem;
+      color: rgba(255, 245, 230, 0.7);
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .sp-stars {
+      color: var(--color-gold);
+      font-size: 0.8125rem;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 639px) {
+      .hero-social-proof {
+        max-width: 300px;
+        padding: 12px 16px;
       }
+      .sp-count { font-size: 0.75rem; }
+      .sp-rating { font-size: 0.6875rem; }
     }
 
     /* ══════════════════════════════
@@ -399,6 +449,30 @@
     }
     @media (min-width: 640px) {
       .expert-section img {
+        width: 300px;
+        max-width: 300px;
+      }
+    }
+
+    /* ══════════════════════════════
+       HERO EXPERT (inline)
+    ══════════════════════════════ */
+    .hero-expert {
+      text-align: center;
+      padding: 0;
+      line-height: 0;
+    }
+    .hero-expert img {
+      display: block;
+      width: 70%;
+      max-width: 70%;
+      height: auto;
+      margin: 0 auto;
+      -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    }
+    @media (min-width: 640px) {
+      .hero-expert img {
         width: 300px;
         max-width: 300px;
       }
@@ -947,20 +1021,23 @@
       background: rgba(255,255,255,0.12);
       color: var(--color-white);
       border: 2px solid rgba(255,255,255,0.3);
+      animation: pulse 2s ease-in-out infinite;
     }
     .plan-btn.basic:hover {
       background: rgba(255,255,255,0.2);
       transform: translateY(-1px);
+      animation: none;
     }
     .plan-btn.premium-cta {
       background: var(--color-cta);
       color: var(--color-white);
       box-shadow: 0 4px 16px rgba(232, 73, 29, 0.3);
-      animation: pulse 2s infinite;
+      animation: pulse 2s ease-in-out infinite;
     }
     .plan-btn.premium-cta:hover {
       background: var(--color-cta-hover);
       transform: translateY(-2px);
+      animation: none;
     }
     .plans-guarantee {
       max-width: 480px;
@@ -1193,56 +1270,37 @@
         padding: 72px 0;
       }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cta-btn,
+      .plan-btn.premium-cta,
+      .plan-btn.basic {
+        animation: none;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Barra de urgência -->
+  <div class="hero-topline">🔥 OFERTA VÁLIDA SOMENTE HOJE, <span id="data-hoje"></span></div>
 
   <!-- ════════════════════════════════════════════
        1. HERO
   ════════════════════════════════════════════ -->
   <section class="hero" id="topo">
     <div class="container">
-      <div class="hero-topline">🔥 OFERTA VÁLIDA SOMENTE HOJE, <span id="data-hoje"></span></div>
+      <h1>Os teus salgados <span class="gold">rebentam</span>, <span class="gold">ensopam em óleo</span> ou nunca ficam como devia?</h1>
+
+      <p class="hero-desc">Mais de 100 receitas testadas, com medidas exatas e passo a passo — para acertares logo à primeira, mesmo que nunca tenhas feito um salgado na vida.</p>
     </div>
 
-    <!-- Carrossel de capas — loop infinito -->
-    <div class="carousel-wrap">
-      <div class="carousel-track">
-        <!-- Série 1 -->
-        <img src="https://i.postimg.cc/yxXj2Hbn/ChatGPT-Image-30-de-jun-de-2026-22-07-53.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" fetchpriority="high" decoding="async">
-        <img src="https://i.postimg.cc/ZnFHXSMP/ChatGPT-Image-30-de-jun-de-2026-22-07-57.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/cCMhPSbf/ChatGPT-Image-30-de-jun-de-2026-22-08-00.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/6qNzH3Y5/ChatGPT-Image-30-de-jun-de-2026-22-08-02.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/V6tDBMBL/ChatGPT-Image-30-de-jun-de-2026-22-08-04.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/0QScdmd9/ChatGPT-Image-30-de-jun-de-2026-22-08-05.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/pTjqY8Yx/ChatGPT-Image-30-de-jun-de-2026-22-08-06.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/4dcBbtbs/ChatGPT-Image-30-de-jun-de-2026-22-08-08.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/MTBdbRbw/ChatGPT-Image-30-de-jun-de-2026-22-08-09.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/hjmpbx8C/ChatGPT-Image-30-de-jun-de-2026-22-08-17.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <img src="https://i.postimg.cc/x8RGtPXR/ChatGPT-Image-30-de-jun-de-2026-22-11-00.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async">
-        <!-- Série 2 (duplicada para loop contínuo sem corte) -->
-        <img src="https://i.postimg.cc/yxXj2Hbn/ChatGPT-Image-30-de-jun-de-2026-22-07-53.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/ZnFHXSMP/ChatGPT-Image-30-de-jun-de-2026-22-07-57.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/cCMhPSbf/ChatGPT-Image-30-de-jun-de-2026-22-08-00.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/6qNzH3Y5/ChatGPT-Image-30-de-jun-de-2026-22-08-02.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/V6tDBMBL/ChatGPT-Image-30-de-jun-de-2026-22-08-04.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/0QScdmd9/ChatGPT-Image-30-de-jun-de-2026-22-08-05.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/pTjqY8Yx/ChatGPT-Image-30-de-jun-de-2026-22-08-06.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/4dcBbtbs/ChatGPT-Image-30-de-jun-de-2026-22-08-08.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/MTBdbRbw/ChatGPT-Image-30-de-jun-de-2026-22-08-09.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/hjmpbx8C/ChatGPT-Image-30-de-jun-de-2026-22-08-17.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-        <img src="https://i.postimg.cc/x8RGtPXR/ChatGPT-Image-30-de-jun-de-2026-22-11-00.png" alt="Capa de e-book Matilde Salgados" width="120" height="180" loading="lazy" decoding="async" aria-hidden="true">
-      </div>
+    <!-- Fotografia da Chef Matilde -->
+    <div class="hero-expert">
+      <img src="https://i.postimg.cc/1R2Zp4zP/Chat-GPT-Image-23-de-jul-de-2026-23-07-44.png" alt="Chef Matilde" width="420" height="560" fetchpriority="high" decoding="async">
     </div>
 
     <div class="container">
-      <h1>
-        Pack de E-books do Salgadeiro Profissional
-        <span>11 E-books + 100+ Receitas</span>
-      </h1>
-
-      <p class="hero-desc">Receitas secretas e simples para fazeres em casa, mesmo que nunca tenhas feito um salgado na vida — e começa a ganhar mais de 100&nbsp;€/dia já hoje!</p>
-
       <div class="price-box">
         <div class="price-calc">Cada e-book vale 7,90&nbsp;€ em separado · 11 × 7,90&nbsp;€ =</div>
         <div class="price-old">86,90&nbsp;€</div>
@@ -1250,21 +1308,22 @@
         <div class="price-badge">Pagamento único · 91% de desconto</div>
       </div>
 
-      <!-- CTA — substituir #CHECKOUT_URL pelo link do checkout -->
       <a href="#planos" class="cta-btn">QUERO O PACK AGORA!</a>
       <p class="hero-access">Acesso imediato por e-mail</p>
 
-      <div class="hero-bonus">🎁 BÓNUS GRÁTIS: Receitas Bónus de Doces + Tabela de Preços do Salgadeiro</div>
-      <p class="hero-chef">Chef Matilde — Salgadeira</p>
+      <!-- Prova social -->
+      <div class="hero-social-proof">
+        <div class="sp-avatars" aria-hidden="true">
+          <img src="https://i.pravatar.cc/72?img=5"  alt="" class="sp-avatar" loading="lazy" decoding="async">
+          <img src="https://i.pravatar.cc/72?img=10" alt="" class="sp-avatar" loading="lazy" decoding="async">
+          <img src="https://i.pravatar.cc/72?img=15" alt="" class="sp-avatar" loading="lazy" decoding="async">
+          <img src="https://i.pravatar.cc/72?img=22" alt="" class="sp-avatar" loading="lazy" decoding="async">
+          <img src="https://i.pravatar.cc/72?img=30" alt="" class="sp-avatar" loading="lazy" decoding="async">
+        </div>
+        <p class="sp-count">+2.847 pessoas já garantiram o pack</p>
+        <p class="sp-rating"><span class="sp-stars">★★★★★</span> Avaliação média de 4,9&thinsp;/&thinsp;5</p>
+      </div>
     </div>
-  </section>
-
-  <!-- ════════════════════════════════════════════
-       EXPERT IMAGE
-  ════════════════════════════════════════════ -->
-  <section class="expert-section">
-    <!-- substituir IMG_EXPERT pelo caminho/URL da foto da expert -->
-    <img src="https://i.postimg.cc/764kC1WB/ChatGPT-Image-29-de-jun-de-2026-21-05-55-1.png" alt="Chef especialista em salgados" class="reveal" width="420" height="560" decoding="async">
   </section>
 
   <!-- ════════════════════════════════════════════
