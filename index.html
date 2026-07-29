@@ -69,6 +69,7 @@
   <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
   <link rel="dns-prefetch" href="https://connect.facebook.net">
   <link rel="dns-prefetch" href="https://pay.hotmart.com">
+  <link rel="preconnect" href="https://fast.wistia.com">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -274,39 +275,6 @@
       margin-right: auto;
     }
 
-    .price-box {
-      background: var(--card);
-      border: 2px solid var(--fg);
-      border-radius: var(--radius-lg);
-      padding: 14px 20px;
-      margin-bottom: 10px;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: var(--shadow-pop);
-      text-align: center;
-    }
-    .price-calc { font-size: 0.875rem; color: var(--muted-fg); margin-bottom: 8px; }
-    .price-old { font-size: 1.5rem; text-decoration: line-through; color: var(--muted-fg); font-weight: 600; }
-    .price-new {
-      font-size: 3rem;
-      font-weight: 700;
-      font-family: var(--font-heading);
-      color: var(--accent);
-      line-height: 1;
-      margin: 8px 0;
-    }
-    .price-badge {
-      display: inline-block;
-      background: transparent;
-      color: var(--muted-fg);
-      padding: 3px 10px;
-      border-radius: var(--radius-full);
-      border: 1.5px solid var(--border);
-      font-size: 0.72rem;
-      font-weight: 600;
-      margin-top: 4px;
-    }
 
     .hero .cta-btn { margin-top: 4px; }
     .hero-social-proof {
@@ -351,12 +319,10 @@
       line-height: 1.3;
     }
     .social-stars .stars { color: #D9A441; }
-    .hero-pack-img {
-      display: block;
+    .hero-vsl {
       width: 100%;
-      max-width: 420px;
-      height: auto;
-      margin: -4px auto 4px;
+      max-width: 380px;
+      margin: 8px auto 12px;
     }
     .hero-bonus {
       background: rgba(139,92,246,0.07);
@@ -919,13 +885,9 @@
 
         <p class="hero-desc">Mais de 100 receitas testadas, técnicas profissionais passo a passo e a tabela de preços que te mostra quanto cobrar — tudo explicado do zero.</p>
 
-        <img src="https://i.postimg.cc/kMjyBRZz/Chat-GPT-Image-25-de-jul-de-2026-22-04-43.png" alt="Pack de e-books Salgadeiro Profissional" class="hero-pack-img" loading="eager" decoding="async">
-
-        <div class="price-box">
-          <div class="price-calc">Vale mais de 90&nbsp;€ em conteúdo — leva tudo hoje por:</div>
-          <div class="price-old">90,90&nbsp;€</div>
-          <div class="price-new">7,90&nbsp;€</div>
-          <div class="price-badge">🔒 Pagamento único · acesso imediato e vitalício</div>
+        <div class="hero-vsl">
+          <script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/tve25tr6nz.js" async type="module"></script><style>wistia-player[media-id='tve25tr6nz']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/tve25tr6nz/swatch');display:block;filter:blur(5px);padding-top:177.78%;}</style>
+          <wistia-player media-id="tve25tr6nz" aspect="0.5625"></wistia-player>
         </div>
 
         <a href="#planos" class="cta-btn">QUERO COMEÇAR HOJE</a>
